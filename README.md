@@ -1,64 +1,49 @@
-# Jogo da Forca
+# Batalha Naval em C
 
-Este é um jogo simples em C que simula o clássico jogo da forca. O jogador tenta adivinhar uma palavra secreta, digitando letras uma de cada vez, com um número limitado de chances.
+Este é um jogo simples de Batalha Naval implementado em C. O objetivo do jogo é encontrar e afundar todos os navios inimigos em um tabuleiro 4x8.
 
-## Funcionamento
+## Como Jogar
 
-O programa solicita ao jogador que insira a palavra secreta. Em seguida, ele exibe na tela uma linha tracejada representando cada letra da palavra. O jogador digita uma letra por vez, e o programa verifica se a letra está presente na palavra secreta. Se estiver, ela é revelada na posição correspondente na linha tracejada. O jogador tem um número limitado de chances para adivinhar a palavra completa.
-
-## Como Executar
-
-1. Certifique-se de ter um compilador C instalado em seu sistema.
-2. Abra um terminal na pasta onde está o arquivo fonte (`jogo_forca.c`).
-3. Compile o programa usando o compilador C. Por exemplo, usando o GCC:
+1. **Compile o código-fonte:** Utilize um compilador C, como o GCC, para compilar o código-fonte:
+   
    ```bash
-   gcc -o jogo_forca jogo_forca.c
+   gcc batalha_naval.c -o batalha_naval
    ```
-4. Execute o programa:
+
+2. **Execute o jogo:** Após compilar, execute o jogo:
+
    ```bash
-   ./jogo_forca
+   ./batalha_naval
    ```
+
+3. **Jogue:** Siga as instruções exibidas no console para dar tiros e tentar acertar os navios inimigos.
+
+## Funcionalidades
+
+- O jogo apresenta um tabuleiro 4x8 onde o jogador pode tentar encontrar e afundar todos os navios inimigos.
+- Existem três navios inimigos aleatoriamente posicionados no tabuleiro a cada execução.
+- O jogador pode dar tiros no tabuleiro digitando as coordenadas da linha e da coluna.
+- O jogo mostra o número de tentativas necessárias para afundar todos os navios.
 
 ## Exemplo de Uso
 
+Ao executar o jogo, você verá um tabuleiro semelhante ao seguinte:
+
 ```
---------------BEM VINDO AO JOGO DA FORCA----------------------
-Tecle 'v' para continuar...v
-Digite a palavra secreta: abacaxi
-
-	Voce possui 6 chances
-------
-Digite uma letra: a
-
-	Voce possui 5 chances
-a-a-a--
-
-Digite uma letra: x
-
-	Voce possui 4 chances
-a-a-a--
-
-Digite uma letra: b
-
-	Voce possui 3 chances
-ba-a-a-
-
-Digite uma letra: c
-
-	Voce possui 2 chances
-bac-a-a
-
-Digite uma letra: i
-
-PARABENS VOCE ACERTOU A PALAVRA. VOCE VENCEU A PARTIDA!!!
-
-A palavra era: abacaxi
+    1    2    3    4    5    6    7    8
+1   *    0    0    *    *    0    0    0
+2   0    0    0    0    0    0    0    0
+3   0    *    0    0    0    0    0    0
+4   0    0    0    0    0    0    0    *
 ```
 
-## Contribuição
+Você então será solicitado a dar tiros no tabuleiro digitando as coordenadas da linha e da coluna. O jogo continuará até que todos os navios inimigos sejam afundados.
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+## Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas relatando bugs ou enviando pull requests com melhorias.
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
+
